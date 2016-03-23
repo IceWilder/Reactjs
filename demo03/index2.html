@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="../src/react.min.js"></script>
+	<script src="../src/react-dom.min.js"></script>
+	<script src="../src/browser.min.js"></script>
+	<title></title>
+</head>
+<body>
+<div id="example">
+	
+</div>
+<script type="text/babel">
+    var style={
+    	color:"blue",
+    	border:"1px solid #000000",
+    	width:100,
+    	lineHeight:"100px"
+    };
+    var Helloworld=React.createClass({
+    	getDefaultProps:function(){
+    			return{
+    				name:'jack'
+    			};
+    	},
+    	render:function(){
+    		return <p>Hello,{this.props.name?this.props.name:'shabi'}</p>;
+    	}
+    });
+	ReactDOM.render(
+		<div style={style}><Helloworld name="zph"/></div>,
+		document.body
+	);
+</script>
+</body>
+</html>
